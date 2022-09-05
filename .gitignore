@@ -1,0 +1,9 @@
+# http://www.gnu.org/software/automake
+
+Makefile.in
+
+# Generated Makefile
+# (meta build system like autotools,
+# can automically generate from config.status script
+# (which is called by configure script))
+Makefile

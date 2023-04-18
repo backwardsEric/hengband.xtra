@@ -54,3 +54,17 @@ music_files = \
 	town5.mp3 \
 	wild.mp3 \
 	winner.mp3
+
+if COCOA
+# APPNAME to APPRES duplicate what's in src/Makefile.am.  It would be nice to
+# avoid that, but until then, they should match.
+APPNAME = $(PACKAGE_NAME)
+APPDIR = $(APPNAME).app
+APPBNDL = $(bindir)/$(APPDIR)
+APPCONT = $(APPBNDL)/Contents
+APPRES = $(APPCONT)/Resources
+
+appmusicdir = $(APPRES)/lib/xtra/music
+appmusic_DATA = \
+	music.cfg $(music_files)
+endif

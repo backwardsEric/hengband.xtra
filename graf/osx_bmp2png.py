@@ -2,7 +2,7 @@
 Converts a tile set from bmp to png for use with the Mac OS X frontend.
 
 Usage
-    python osx_bmp2png.py input_file output_file [options]
+    python3 osx_bmp2png.py input_file output_file [options]
 
 Options
 --mask maskfile
@@ -21,11 +21,11 @@ Options
 
 --terrain lx1 ly1 ux1 uy1 ...
     Sets bounding boxes for parts of the tile set that are to be treated
-    as completely opaque (i.e. as background terrain).  Each bound box is
+    as completely opaque (i.e. as background terrain).  Each bounding box is
     given by the coordinates for the lower corner, (lx,ly), and upper
     corner, (ux,uy), with ux > lx and uy > ly.  If not set, the default
-    is to use seven bounding boxes, (0,0) to (256,16), (64,16) to
-    (256,24), (216,80) to (240,88), (48,272) to (152,280), (176,272) to
+    is to use seven bounding boxes, (0,0) to (512,16), (64,16) to
+    (512,24), (216,80) to (240,88), (48,272) to (152,280), (176,272) to
     (192,280), (0,632) to (256,688), and (0,712) to (256,736) which are the
     terrain tiles in Hengband's old 8x8 tile set.  Is overridden by the
     --mask option if that option is set.
@@ -39,10 +39,10 @@ Options
 Example
 This is the conversion that was used to prepare the old tile set for the
 OS X front end:
-    python osx_bmp2png.py 8x8.bmp 8x8.png
+    python3 osx_bmp2png.py 8x8.bmp old/8x8.png
 That is equivalent to
-    python osx_bmp2png.py 8x8.bmp 8x8.png -tcoord 0 0 \
-        -terrain 0 0 256 16 64 16 256 24 216 80 240 88 48 272 152 280 \
+    python3 osx_bmp2png.py 8x8.bmp old/8x8.png -tcoord 0 0 \
+        -terrain 0 0 512 16 64 16 512 24 216 80 240 88 48 272 152 280 \
         176 272 192 280 0 632 256 688 0 712 256 736
 
 This is the conversion that was used to prepare Adam Bolt's tile set for the

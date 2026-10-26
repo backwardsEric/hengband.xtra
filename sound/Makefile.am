@@ -2,10 +2,16 @@
 
 # unused_sound_files has files that are not mentioned in sound.cfg.
 EXTRA_DIST = \
-	readme.txt \
-	sound.cfg \
+	$(sound_misc) \
+	$(sound_conf) \
 	$(sound_files) \
 	$(unused_sound_files)
+
+sound_misc = \
+	readme.txt
+
+sound_conf = \
+	sound.cfg
 
 sound_files = \
 	bite.wav \
@@ -103,5 +109,5 @@ APPRES = $(APPCONT)/Resources
 
 appsounddir = $(APPRES)/lib/xtra/sound
 appsound_DATA = \
-	sound.cfg $(sound_files)
+	$(sound_conf) $(sound_files)
 endif

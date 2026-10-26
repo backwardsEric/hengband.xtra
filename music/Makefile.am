@@ -1,11 +1,17 @@
 ## Makefile.am -- Process this file with automake to process Makefile.in
 
 EXTRA_DIST = \
-	readme.txt \
-	desktop.ini \
-	delete.me \
-	music.cfg \
+	$(music_misc) \
+	$(music_conf) \
 	$(music_files)
+
+music_misc = \
+	delete.me \
+	desktop.ini \
+	readme.txt
+
+music_conf = \
+	music.cfg
 
 music_files = \
 	The_Serpent_of_Chaos.mp3 \
@@ -66,5 +72,5 @@ APPRES = $(APPCONT)/Resources
 
 appmusicdir = $(APPRES)/lib/xtra/music
 appmusic_DATA = \
-	music.cfg $(music_files)
+	$(music_conf) $(music_files)
 endif

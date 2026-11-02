@@ -8,6 +8,7 @@ converted_tilesets = \
 	old/8x8.png
 
 EXTRA_DIST = \
+  delete.me \
   $(hengband_tilesets) \
   $(angband4_conf) \
   osx_bmp2png.py \

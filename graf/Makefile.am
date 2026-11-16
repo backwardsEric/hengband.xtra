@@ -11,6 +11,9 @@ EXTRA_DIST = \
   delete.me \
   $(hengband_tilesets) \
   $(angband4_conf) \
+  original32.png \
+  original32.LICENSE.txt \
+  original32.README.txt \
   osx_bmp2png.py \
   $(converted_tilesets)
 
